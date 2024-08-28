@@ -46,6 +46,16 @@ public class SeleniumFunctionsPart3 {
         for (WebElement optionItem : allOptions){
             System.out.println(optionItem.getText());
         }
+        System.out.println("------------------------------");
+        //Use getAllSelectedOptions() gets  all selected options in multi select dropdown. - returns a list of webelements.
+        WebElement multiSelect = driver.findElement(By.xpath("//select[@name='multipleselect[]']"));
+        Select multiSelectItem = new Select(multiSelect);
+        List<WebElement> listOfOptions =  multiSelectItem.getAllSelectedOptions();
+        for (WebElement element : listOfOptions){
+            System.out.println(element.getText());
+        }
+
+
 
 
         Thread.sleep(3000);
