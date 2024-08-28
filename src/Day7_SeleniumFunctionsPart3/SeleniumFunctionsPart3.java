@@ -48,7 +48,8 @@ public class SeleniumFunctionsPart3 {
         }
 
 
-
+        Thread.sleep(3000);
+        driver.quit();
 
     }
 }
