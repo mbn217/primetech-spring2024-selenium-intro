@@ -60,7 +60,7 @@ public class HWSolutions {
             }
         }
 
-
+        driver.quit();
     }
 
 
@@ -107,6 +107,7 @@ public class HWSolutions {
 
         //---------------
 
+        driver.quit();
     }
 
 
