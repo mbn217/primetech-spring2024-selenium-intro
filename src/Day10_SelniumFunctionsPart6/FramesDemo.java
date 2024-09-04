@@ -39,6 +39,8 @@ public class FramesDemo {
         WebElement h1Tag = driver.findElement(By.xpath("//h1[.='Nested Frames Example']"));
         System.out.println(h1Tag.getText());
 
+        driver.quit();
+
     }
 
 }

@@ -26,7 +26,7 @@ public class ActionClassDemo {
         Actions action = new Actions(driver);
         action.doubleClick(doubleClickBtn).build().perform();//recommended way
 
-
+        driver.quit();
     }
 
     public static void dragAndDropExample() throws InterruptedException {
@@ -49,7 +49,7 @@ public class ActionClassDemo {
 
         //option 2
         actions.clickAndHold(source2).moveToElement(destination2).release().build().perform();
-
+        driver.quit();
     }
 
     public static void onContextExample() throws InterruptedException {
@@ -60,6 +60,8 @@ public class ActionClassDemo {
 
         Actions actions = new Actions(driver);
         actions.contextClick(onContextBtn).build().perform();
+
+        driver.quit();
     }
 
     public static void onMouseOverExample() throws InterruptedException {
@@ -70,7 +72,7 @@ public class ActionClassDemo {
         WebElement onMouseOver = driver.findElement(By.xpath("//button[@id='onmouseover']"));
         Actions actions = new Actions(driver);
         actions.moveToElement(onMouseOver).build().perform();
-
+        driver.quit();
     }
 
     public static void onMouseLeaveExample() throws InterruptedException {
@@ -98,6 +100,7 @@ public class ActionClassDemo {
         WebElement htmlpage = driver.findElement(By.xpath("//html"));
         actions.moveToElement(htmlpage).build().perform();
 
+        driver.quit();
 
 
     }
