@@ -4,6 +4,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import pages.LandingPage;
 import pages.LoginPage;
+import utilities.BrowserUtils;
 import utilities.ConfigurationReader;
 import utilities.Driver;
 
@@ -35,6 +36,8 @@ public class SauceDemoLogin {
         System.out.println("Test Case 1 started ");
         //WebDriver driver = new ChromeDriver();
         driver.get(ConfigurationReader.getPropertyValue("baseUrl"));
+        //refresh page
+        BrowserUtils.refreshPage(driver);
         //enter username
         loginPage.username.sendKeys("standard_user");
         //enter password
